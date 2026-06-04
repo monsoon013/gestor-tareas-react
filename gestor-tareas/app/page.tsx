@@ -36,21 +36,25 @@ export default function Home() {
 
   
   return (
-    <main className='max-w-lg mx-auto p-4'>
-      <h1 className='text-2xl font-bold mb-4'>Gestor de tareas</h1>
-      <div className='mb-4'>
-        <input type='text' placeholder='Título' value={title} onChange={(e) => setTitle(e.target.value)} className='w-full p-2 border rounded mb-2'/>
-        <textarea value={desc} onChange={(e) => setDesc(e.target.value)} placeholder='Descripción' className='w-full p-2 border rounded mb-2'/>
-        <button onClick={handleAddTask} className='w-full bg-blue-500 text-white p-2 rounded'>Agregar tarea</button>
+    <main className='grid grid-cols-1 bg-[#f2e9e4] h-dvh py-30 gap-50 md:grid-cols-2 p-4 '>
+      <div className='mb-4 w-full'>
+        <h1 className='text-2xl font-bold mb-4 text-center text-[#333a2a]'>Crea una nueva tarea</h1>
+        <div className='mb-4'>
+          <input type='text' placeholder='Título' value={title} onChange={(e) => setTitle(e.target.value)} className='w-full p-2 border text-[#333a2a] rounded mb-2'/>
+          <textarea value={desc} onChange={(e) => setDesc(e.target.value)} placeholder='Descripción' className='w-full p-2 text-[#333a2a] border rounded mb-2'/>
+          <button onClick={handleAddTask} className='w-full bg-[#333a2a] text-[#f2e9e4] p-2 rounded'>Agregar tarea</button>
+        </div>
       </div>
-      <div className='mb-4'>
+      <div className='mb-4 w-full'>
+        <h2 className='text-2xl font-bold mb-4 text-center text-[#333a2a]'>Lista de tareas</h2>
         {tasks.map((task) => (
-          <div key={task.id} className='border p-2 rounded mb-2'>
-            <h2 className='text-lg font-bold'>{task.title}</h2>
-            <p>{task.desc}</p>
+          <div key={task.id} className='bg-[#edecea] border text-[#333a2a] p-2 rounded mb-2'>
+            <h2 className='text-lg text-[#333a2a] font-bold'>{task.title}</h2>
+            <p className='text-[#333a2a]'>{task.desc}</p>
           </div>
         ))}
       </div>
     </main>
   );
 }
+ 
