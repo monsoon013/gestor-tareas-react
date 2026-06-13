@@ -36,7 +36,7 @@ export default function Home() {
 
   
   return (
-    <main className='grid grid-cols-1 bg-[#f2e9e4] h-dvh py-30 gap-50 md:grid-cols-2 p-4 '>
+        <main className='grid grid-cols-1 bg-[#f2e9e4] h-dvh py-30 gap-50 md:grid-cols-2 p-4 '>
       <div className='mb-4 w-full'>
         <h1 className='text-2xl font-bold mb-4 text-center text-[#333a2a]'>Crea una nueva tarea</h1>
         <div className='mb-4'>
